@@ -1,3 +1,3 @@
 $(function(){
-	alert(hehe)
+	alert('hehe')
 })
