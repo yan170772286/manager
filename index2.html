@@ -8,13 +8,161 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>benben</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css" />
+        <style>
+        </style>
     </head>
 
     <body ng-app="myApp">
-        <div ng-controller="myCtrl" class="container">
-            2222222
+        <div ng-controller="myCtrl" class="row ">
+            <div class="container">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div id="legend" class="row">
+                            <div class="col-xs-6 col-xs-offset-3">
+                                <input class="form-control" ng-model="a.title">
+                            </div>
+                            <div class="col-xs-3">
+                                <button class="btn btn-success "
+                                ng-click="preview()"
+                                >预览</button>
+
+                                <a class="btn btn-success hide" id="previewBtn" target="_blank" href="index2.html">预览</a>
+                            </div>
+                        </div>
+                        <div class="control-group">
+
+                            <!-- Prepended text-->
+                            <div class="controls">
+                                <div class="input-prepend row">
+                                    <div class="col-xs-4">
+                                        <span class="add-on">发货方库:</span>
+                                        <input class="span2" placeholder="placeholder" ng-model="a.stock" type="text">
+                                    </div>
+
+                                </div>
+                                <div class="input-prepend row">
+                                    <div class="col-xs-3">
+                                        <span class="add-on">收货门店:</span>
+                                        <input class="span2" placeholder="placeholder" ng-model="a.receiveStock" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">日期:</span>
+                                        <input class="span2" placeholder="placeholder" ng-model="a.date" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">商品条目数:</span>
+                                        <span class="span2" ng-bind="a.rows.length" type="text"></span>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">票号:</span>
+                                        <input class="span2" style="width:200px" placeholder="placeholder" ng-model="a.uid" type="text">
+                                    </div>
+                                </div>
+                                <div class="input-prepend row">
+                                    <div class="col-xs-3">
+                                        <span class="add-on">库区:</span>
+                                        <input class="span2" placeholder="placeholder" ng-model="a.kuqu" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="span2" ng-bind="a.receiveStock" type="text"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+
+                </form>
+
+                <div class="row ">
+                    <style>
+                        th {
+                            text-align: center
+                        }
+
+                        td input {
+                            max-width: 100%;
+                        }
+
+                        td {
+                            text-align: center
+                        }
+
+                        td.num {
+                            text-align: right
+                        }
+                    </style>
+                    <div class="col-xs-12">
+                        <button class="btn btn-primary" style="float:right" ng-click="addRow()">增行</button>
+                    </div>
+                    <div class="col-xs-12">
+                        <table class="table  table-bordered " style="table-layout:fixed;">
+                            <thead>
+                                <th width="5%">货位 </th>
+                                <th width="7%">产品编码 </th>
+                                <th width="10%">通用名称 </th>
+                                <th width="5%">规格 </th>
+                                <th width="8%">生产厂商\产地 </th>
+                                <th width="6%">剂形/单位 </th>
+                                <th width="4%">数量 </th>
+                                <th width="4%">单价 </th>
+                                <th width="4%">金额 </th>
+                                <th width="5%">批号 </th>
+                                <th width="8%">失效/生产日期 </th>
+                                <th width="7%">批准文号 </th>
+                                <th width="5%">质量状况 </th>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="row in a.rows">
+                                    <td><a class="btn btn-default" href ng-click="removeRow(row,a.rows)">删行</a></td>
+                                    <td>
+                                        <input ng-model="row.cCode">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cName">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cGuige">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cArea">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cUnit">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cCount">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cPrice">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.cTotalMoney">
+                                    </td>
+
+                                    <td>
+                                        <input ng-model="row.pihao">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.riqi">
+                                    </td>
+                                    <td>
+                                        <input ng-model="row.wenhao">
+                                    </td>
+                                    <td ng-bind="row.zlzk">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
 
 
         </div>
