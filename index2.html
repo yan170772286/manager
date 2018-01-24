@@ -19,36 +19,31 @@
                 <form class="form-horizontal">
                     <fieldset>
                         <div id="legend" class="row">
-                            <div class="col-xs-6 col-xs-offset-3">
-                                <input class="form-control" ng-model="a.title">
+                            <div class="col-xs-12 " style="text-align:center">
+                                <h3 ng-bind="a.title">
+                                    </h2>
                             </div>
-                            <div class="col-xs-3">
-                                <button class="btn btn-success "
-                                ng-click="preview()"
-                                >预览</button>
 
-                                <a class="btn btn-success hide" id="previewBtn" target="_blank" href="index2.html">预览</a>
-                            </div>
                         </div>
                         <div class="control-group">
 
                             <!-- Prepended text-->
                             <div class="controls">
-                                <div class="input-prepend row">
+                                <div class="span-prepend row">
                                     <div class="col-xs-4">
                                         <span class="add-on">发货方库:</span>
-                                        <input class="span2" placeholder="placeholder" ng-model="a.stock" type="text">
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.stock" type="text">
                                     </div>
 
                                 </div>
-                                <div class="input-prepend row">
+                                <div class="span-prepend row">
                                     <div class="col-xs-3">
                                         <span class="add-on">收货门店:</span>
-                                        <input class="span2" placeholder="placeholder" ng-model="a.receiveStock" type="text">
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.receiveStock" type="text">
                                     </div>
                                     <div class="col-xs-3">
                                         <span class="add-on">日期:</span>
-                                        <input class="span2" placeholder="placeholder" ng-model="a.date" type="text">
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.date" type="text">
                                     </div>
                                     <div class="col-xs-3">
                                         <span class="add-on">商品条目数:</span>
@@ -56,13 +51,13 @@
                                     </div>
                                     <div class="col-xs-3">
                                         <span class="add-on">票号:</span>
-                                        <input class="span2" style="width:200px" placeholder="placeholder" ng-model="a.uid" type="text">
+                                        <span class="span2" style="width:200px" placeholder="placeholder" ng-bind="a.uid" type="text">
                                     </div>
                                 </div>
-                                <div class="input-prepend row">
+                                <div class="span-prepend row">
                                     <div class="col-xs-3">
                                         <span class="add-on">库区:</span>
-                                        <input class="span2" placeholder="placeholder" ng-model="a.kuqu" type="text">
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.kuqu" type="text">
                                     </div>
                                     <div class="col-xs-3">
                                         <span class="span2" ng-bind="a.receiveStock" type="text"></span>
@@ -84,7 +79,7 @@
                             text-align: center
                         }
 
-                        td input {
+                        td span {
                             max-width: 100%;
                         }
 
@@ -95,10 +90,16 @@
                         td.num {
                             text-align: right
                         }
+
+                        span {
+                            word-break: normal;
+                            width: auto;
+                            display: block;
+                            white-space: pre-wrap;
+                            word-wrap: break-word;
+                            overflow: hidden;
+                        }
                     </style>
-                    <div class="col-xs-12">
-                        <button class="btn btn-primary" style="float:right" ng-click="addRow()">增行</button>
-                    </div>
                     <div class="col-xs-12">
                         <table class="table  table-bordered " style="table-layout:fixed;">
                             <thead>
@@ -118,40 +119,40 @@
                             </thead>
                             <tbody>
                                 <tr ng-repeat="row in a.rows">
-                                    <td><a class="btn btn-default" href ng-click="removeRow(row,a.rows)">删行</a></td>
+                                    <td></td>
                                     <td>
-                                        <input ng-model="row.cCode">
+                                        <span ng-bind="row.cCode">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cName">
+                                        <span ng-bind="row.cName">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cGuige">
+                                        <span ng-bind="row.cGuige">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cArea">
+                                        <span ng-bind="row.cArea">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cUnit">
+                                        <span ng-bind="row.cUnit">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cCount">
+                                        <span ng-bind="row.cCount">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cPrice">
+                                        <span ng-bind="row.cPrice">
                                     </td>
                                     <td>
-                                        <input ng-model="row.cTotalMoney">
+                                        <span ng-bind="row.cTotalMoney">
                                     </td>
 
                                     <td>
-                                        <input ng-model="row.pihao">
+                                        <span ng-bind="row.pihao">
                                     </td>
                                     <td>
-                                        <input ng-model="row.riqi">
+                                        <span ng-bind="row.riqi">
                                     </td>
                                     <td>
-                                        <input ng-model="row.wenhao">
+                                        <span ng-bind="row.wenhao">
                                     </td>
                                     <td ng-bind="row.zlzk">
                                     </td>
@@ -167,7 +168,7 @@
 
         </div>
         <script src="js/vendors.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/index2.js"></script>
     </body>
 
 </body>
