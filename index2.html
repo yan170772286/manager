@@ -164,85 +164,162 @@
                 </div>
 
                 <form class="form-horizontal">
-                        <fieldset>
-                            <div id="legend" class="row">
-                                <div class="col-xs-6 col-xs-offset-3">
-                                    <span class="form-control" ng-bind="a.title">
-                                </div>
-    
+                    <fieldset>
+                        <div id="legend" class="row">
+                            <div class="col-xs-6 col-xs-offset-3">
+                                <span class="form-control" ng-bind="a.title">
                             </div>
-                            <div class="control-group">
-    
-                                <!-- Prepended text-->
-                                <div class="controls">
-                                    <div class="span-prepend row">
-                                        <div class="col-xs-4">
-                                            <span class="add-on">发货方库:</span>
-                                            <span class="span2" placeholder="placeholder" ng-bind="a.stock" type="text">
-                                        </div>
-    
-                                    </div>
-                                    <div class="span-prepend row">
-                                        <div class="col-xs-3">
-                                            <span class="add-on">收货门店:</span>
-                                            <span class="span2" placeholder="placeholder" ng-bind="a.receiveStock" type="text">
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <span class="add-on">日期:</span>
-                                            <span class="span2" placeholder="placeholder" ng-bind="a.date" type="text">
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <span class="add-on">商品条目数:</span>
-                                            <span class="span2" ng-bind="a.rows.length" type="text"></span>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <span class="add-on">票号:</span>
-                                            <span class="span2" style="width:200px" placeholder="placeholder" ng-bind="a.uid" type="text">
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-                            <style>
-                                .yy2 {
-                                    border: 1px solid #ddd;
-                                }
-                            </style>
-                            <div class="row">
-                                    <div class="col-xs-5 yy2" style="margin-left:15px;
-                                    margin-right:0;padding-left:0">
-                                        <div class="col-xs-6">
-                                            页金额小计:0.00
-                                        </div>
-                                        <div class="col-xs-6">
-                                            页数量小计: <span style="margin-left:50px" >0</span>
-                                        </div>
-                                </div>
-                                <div class="col-xs-7 yy2" style="border-left:0;margin-left:-30px;
-                                margin-right:15px;padding-left:0">
-                                    <div class="col-xs-7" style="margin-left:30px">
-                                        金额总计:<span  style="margin-left:70px" ng-bind="a.totalMoney"></span>
-                                    </div>
+
+                        </div>
+                        <div class="control-group">
+
+                            <!-- Prepended text-->
+                            <div class="controls">
+                                <div class="span-prepend row">
                                     <div class="col-xs-4">
-                                        数量总计:<span 
-                                        style="margin-left:70px" ng-bind="a.totalCount"></span>
+                                        <span class="add-on">发货方库:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.stock" type="text">
+                                    </div>
+
+                                </div>
+                                <div class="span-prepend row">
+                                    <div class="col-xs-3">
+                                        <span class="add-on">收货门店:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.receiveStock" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">日期:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.date" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">商品条目数:</span>
+                                        <span class="span2" ng-bind="a.rows.length" type="text"></span>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">票号:</span>
+                                        <span class="span2" style="width:200px" placeholder="placeholder" ng-bind="a.uid" type="text">
                                     </div>
                                 </div>
-    
+
                             </div>
-                        </fieldset>
-    
-    
-    
-                    </form>
-            </div>
+
+                        </div>
+                        <style>
+                            .yy2 {
+                                border: 1px solid #ddd;
+                            }
+                        </style>
+                        <div class="row">
+                            <div class="col-xs-5 yy2" style="margin-left:15px;
+                                    margin-right:0;padding-left:0">
+                                <div class="col-xs-6">
+                                    页金额小计:0.00
+                                </div>
+                                <div class="col-xs-6">
+                                    页数量小计:
+                                    <span style="margin-left:50px">0</span>
+                                </div>
+                            </div>
+                            <div class="col-xs-7 yy2" style="border-left:0;margin-left:-30px;
+                                margin-right:15px;padding-left:0">
+                                <div class="col-xs-7" style="margin-left:30px">
+                                    金额总计:
+                                    <span style="margin-left:70px" ng-bind="a.totalMoney"></span>
+                                </div>
+                                <div class="col-xs-4">
+                                    数量总计:
+                                    <span style="margin-left:70px" ng-bind="a.totalCount"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </fieldset>
 
 
 
-        </div>
-        <script src="js/vendors.js"></script>
-        <script src="js/index2.js"></script>
+                </form>
+                <form class="form-horizontal" style="margin-top:5px">
+                    <fieldset>
+
+                        <div class="control-group">
+
+                            <!-- Prepended text-->
+                            <div class="controls">
+                                <div class="span-prepend row">
+                                    <div class="col-xs-3">
+                                        <span class="add-on">制单人:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.footer1" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">保管员:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.footer2" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">复核员:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.footer3" type="text">
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <span class="add-on">门店验收员:</span>
+                                        <span class="span2" placeholder="placeholder" ng-bind="a.footer4" type="text">
+                                    </div>
+
+                                </div>
+
+
+                    </fieldset>
+
+
+
+                </form>
+
+                <div class="checkbox">
+                    <style>
+                        .y3 label{
+                            margin-left:5px;
+                           
+                        }
+                        .y3 span {
+                            margin-top:15px;
+                        }
+                        .yy4 {
+                            margin-top:7px;
+                        }
+                    </style>
+                    <div class="col-xs-6 y3">
+                        <span><div style="margin-top:10px" class="col-xs-3">质量状况：</div></span>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" id="inlineCheckbox1" value="option1" style="zoom:170%;"> 
+                            
+                           <div class="yy4"><span>合格</span></div> 
+                        </label>
+                        <label class="checkbox-inline" style="margin-left:25px">
+                            <input type="checkbox" id="inlineCheckbox2" value="option2" style="zoom:170%;"> 
+                            <div class="yy4"><span>不合格</span></div> 
+                            
+                        </label>
+                    </div>
+                    <div class="col-xs-6 y3">
+                            <span><div style="margin-top:10px" class="col-xs-3">验收结论：</div></span>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1" style="zoom:170%;"> 
+                                
+                               <div class="yy4"><span>符合规定</span></div> 
+                            </label>
+                            <label class="checkbox-inline" style="margin-left:25px">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2" style="zoom:170%;"> 
+                                <div class="yy4"><span>不符合规定</span></div> 
+                                
+                            </label>
+                        </div>
+
+                </div>
+                </div>
+
+
+
+                </div>
+                <script src="js/vendors.js"></script>
+                <script src="js/index2.js"></script>
     </body>
 
 </body>
